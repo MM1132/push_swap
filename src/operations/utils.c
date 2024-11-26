@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:53:08 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 16:53:27 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:03:22 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,14 @@ void	shift_backward(t_stack *stack)
 		stack->numbers[index]  = stack->numbers[index + 1];
 		index++;
 	}
+}
+
+// First element becomes the last element of the stack
+void	rotate_stack(t_stack *stack)
+{
+	int	first_number_save;
+
+	first_number_save = stack->numbers[0];
+	shift_backward(stack);
+	stack->numbers[stack->count - 1] = first_number_save;
 }

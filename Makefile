@@ -14,6 +14,8 @@ PUSH_SWAP_SRC := \
 	$(SRC_DIR)/sort.c \
 	$(SRC_DIR)/operations/push_b.c \
 	$(SRC_DIR)/operations/push_a.c \
+	$(SRC_DIR)/operations/rotate_a.c \
+	$(SRC_DIR)/operations/rotate_b.c \
 	$(SRC_DIR)/operations/utils.c
 PUSH_SWAP_OBJ := $(PUSH_SWAP_SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

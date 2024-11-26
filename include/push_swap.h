@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:15:50 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 16:55:57 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:05:36 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,12 @@ void	push_swap_sort(t_stack *stack_a, t_stack *stack_b);
 // OPERATIONS
 void	push_b(t_stack *stack_a, t_stack *stack_b);
 void	push_a(t_stack *stack_b, t_stack *stack_a);
+void	rotate_a(t_stack *stack_a);
+void	rotate_b(t_stack *stack_b);
 
 // OPERATION UTILS
 void	shift_forward(t_stack *stack);
 void	shift_backward(t_stack *stack);
+void	rotate_stack(t_stack *stack);
 
 #endif

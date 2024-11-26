@@ -50,7 +50,9 @@ MAIN_FILES=\
 	ft_printf/print_functions/print_string_format.c \
 	ft_printf/print_functions/print_unsigned_format.c \
 	get_next_line/get_next_line.c \
-	get_next_line/get_next_line_utils.c
+	get_next_line/get_next_line_utils.c \
+	ft_isspace.c \
+	ft_list_atoi.c
 
 BONUS_FILES=\
 	ft_lstnew.c \

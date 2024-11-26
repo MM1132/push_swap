@@ -1,0 +1,25 @@
+
+
+
+
+if (number <= how many is pushed over)
+	push over and rotate b (essentially append at bottom)
+	count ++
+else if number is smaller than decision median (sqrt(start len) * 1.3)
+	push to b
+	count ++
+else 
+	rotate
+
+
+AFTER A EMPTY
+
+- get biggest number in b
+- find shortest path to top (pos smaller or bigger than len / 2)
+- move to top using shortes way
+- push to a
+
+///
+
+Lars: linear algorithm is not good for sorting
+do the bucket sorts, two sorts of buckets, and then you're finished

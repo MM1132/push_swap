@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_b.c                                         :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 17:01:00 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 17:20:03 by rreimann         ###   ########.fr       */
+/*   Created: 2024/11/26 17:30:37 by rreimann          #+#    #+#             */
+/*   Updated: 2024/11/26 17:37:09 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-void	rotate_b(t_stack *stack_b)
+int	ft_sqrt(int nb)
 {
-	rotate_stack(stack_b);
-	ft_printf("rb\n");
+	int	number;
+	int	answer;
+
+	if (nb == 1)
+		return (1);
+	if (nb < 1)
+		return (0);
+	number = 1;
+	while (number <= 46340)
+	{
+		answer = number * number;
+		if (answer >= nb)
+		{
+			if (answer == nb)
+				return (number);
+			break ;
+		}
+		number++;
+	}
+	return (0);
 }

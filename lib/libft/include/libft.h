@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:05:49 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/25 15:21:14 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:33:44 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // MY FUNCTIONS
 int		ft_isspace(char c);
 int		*ft_list_atoi(char **numbers);
+int		ft_sqrt(int nb);
 
 #endif

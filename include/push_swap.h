@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:15:50 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 17:05:36 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:32:20 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_stack	*initialize_stack(char **numbers_as_strings, int skip);
 t_stack	*initialize_stack_empty(int length);
 void	free_stack(t_stack *stack);
 void	print_stack(t_stack *stack);
-void	push_swap_sort(t_stack *stack_a, t_stack *stack_b);
+void	push_swap_sort(t_stack *stack_a, t_stack *stack_b, int decision_median);
 
 // OPERATIONS
 void	push_b(t_stack *stack_a, t_stack *stack_b);

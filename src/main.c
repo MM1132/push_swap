@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:14:05 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 16:52:21 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:32:25 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,6 @@ int main(int argc, char **argv)
 	else
 		return (1);
 	stack_b = initialize_stack_empty(stack_a->count);
-	print_stack(stack_a);
-	push_swap_sort(stack_a, stack_b);
-	print_stack(stack_a);
-	print_stack(stack_b);
+	push_swap_sort(stack_a, stack_b, (int)(ft_sqrt(stack_a->count) * 1.3));
 	return (free_stack(stack_a), free_stack(stack_b), 0);
 }

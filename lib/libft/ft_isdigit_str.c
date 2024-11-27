@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_b.c                                         :+:      :+:    :+:   */
+/*   ft_isdigit_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 17:01:00 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/27 12:01:18 by rreimann         ###   ########.fr       */
+/*   Created: 2024/11/27 12:31:35 by rreimann          #+#    #+#             */
+/*   Updated: 2024/11/27 12:36:03 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	rotate_b(t_stack *stack_b)
+int	ft_isdigit_str(char *str)
 {
-	rotate_stack(stack_b);
-	ft_printf("rb\n");
+	int	index;
+
+	index = 0;
+	while (str[index] != 0)
+	{
+		if (ft_isdigit((int)(str[index])) == 0)
+		{
+			return (0);
+		}
+		index++;
+	}
+	return (1);
 }

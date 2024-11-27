@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate_b.c                                         :+:      :+:    :+:   */
+/*   reverse_rotate_b.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 17:01:00 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/27 12:01:18 by rreimann         ###   ########.fr       */
+/*   Created: 2024/11/27 12:03:22 by rreimann          #+#    #+#             */
+/*   Updated: 2024/11/27 12:14:53 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate_b(t_stack *stack_b)
+void	reverse_rotate_b(t_stack *stack_b)
 {
-	rotate_stack(stack_b);
-	ft_printf("rb\n");
+	reverse_rotate(stack_b);
+	ft_printf("rrb\n");
 }

@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:53:08 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 17:03:22 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 12:11:31 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,13 @@ void	rotate_stack(t_stack *stack)
 	first_number_save = stack->numbers[0];
 	shift_backward(stack);
 	stack->numbers[stack->count - 1] = first_number_save;
+}
+
+void	reverse_rotate(t_stack *stack)
+{
+	int	last_number_save;
+
+	last_number_save = stack->numbers[stack->count - 1];
+	shift_forward(stack);
+	stack->numbers[0] = last_number_save;
 }

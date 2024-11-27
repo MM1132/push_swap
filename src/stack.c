@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 14:53:58 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 16:24:54 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 12:37:39 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ t_stack	*initialize_stack(char **numbers_as_strings, int skip)
 	index = 0;
 	while (numbers_as_strings[index + skip] != NULL)
 	{
+		if (ft_isdigit_str(numbers_as_strings[index + skip]) == 0)
+			return (free(stack->numbers), free(stack), NULL);
 		stack->numbers[index] = ft_atoi(numbers_as_strings[index + skip]);
 		index++;
 	}

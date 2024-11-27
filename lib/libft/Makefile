@@ -53,7 +53,8 @@ MAIN_FILES=\
 	get_next_line/get_next_line_utils.c \
 	ft_isspace.c \
 	ft_list_atoi.c \
-	ft_sqrt.c
+	ft_sqrt.c \
+	ft_isdigit_str.c
 
 BONUS_FILES=\
 	ft_lstnew.c \

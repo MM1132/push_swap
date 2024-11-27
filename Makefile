@@ -16,7 +16,8 @@ PUSH_SWAP_SRC := \
 	$(SRC_DIR)/operations/push_a.c \
 	$(SRC_DIR)/operations/rotate_a.c \
 	$(SRC_DIR)/operations/rotate_b.c \
-	$(SRC_DIR)/operations/utils.c
+	$(SRC_DIR)/operations/utils.c \
+	$(SRC_DIR)/operations/reverse_rotate_b.c
 PUSH_SWAP_OBJ := $(PUSH_SWAP_SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Rules

@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:14:14 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/27 12:15:07 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:29:48 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,23 +59,27 @@ static void	back_to_stack_a(t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
-void	push_swap_sort(t_stack *stack_a, t_stack *stack_b, int decision_median)
+void	push_swap_sort(t_stack *stack_a, t_stack *stack_b)
 {
+	int	decision_median;
+
+	decision_median = (double)ft_sqrt(stack_a->count) * (double) 1.3;
 	while (stack_a->count > 0)
 	{
 		if (stack_a->numbers[0] <= stack_b->count)
 		{
 			push_b(stack_a, stack_b);
-			rotate_b(stack_b);
+			if (!(stack_a->numbers[0] <= stack_b->count + decision_median))
+				rotate_ab(stack_a, stack_b);
+			else
+				rotate_b(stack_b);
 		}
 		else if (stack_a->numbers[0] <= stack_b->count + decision_median)
 		{
 			push_b(stack_a, stack_b);
 		}
-		else
-		{
+		else if (stack_a->count > 1)
 			rotate_a(stack_a);
-		}
 	}
 	back_to_stack_a(stack_a, stack_b);
 }

@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:02:19 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/23 10:23:40 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:20:31 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 # define FT_PRINTF_H
 # include <stddef.h>
 # include <stdarg.h>
-
-extern const char	g_lowercase_hex_base[];
-extern const char	g_uppercase_hex_base[];
-extern const char	g_base_10[];
 
 typedef struct s_format_specifier
 {

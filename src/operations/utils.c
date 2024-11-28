@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:53:08 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/27 12:11:31 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:34:09 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	shift_backward(t_stack *stack)
 	index = 0;
 	while (index < stack->count - 1)
 	{
-		stack->numbers[index]  = stack->numbers[index + 1];
+		stack->numbers[index] = stack->numbers[index + 1];
 		index++;
 	}
 }

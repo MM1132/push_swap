@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 17:30:37 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/26 19:40:11 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 13:00:36 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int	ft_sqrt(int nb)
 		answer = number * number;
 		if (answer >= nb)
 		{
-			// Check if number * number is closer or (number - 1) * (number - 1) is closer to the answer
 			second_answer = (number - 1) * (number - 1);
 			if (distance(answer, nb) < distance(second_answer, nb))
 				return (number);

@@ -6,16 +6,16 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 19:29:16 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/25 15:11:01 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:33:11 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
-	int	output;
-	int	multiplier;
+	long	output;
+	long	multiplier;
 
 	while (ft_isspace(*str))
 		str++;

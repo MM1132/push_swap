@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 13:35:29 by rreimann          #+#    #+#             */
-/*   Updated: 2024/10/23 00:07:00 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/27 16:25:44 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-const char	g_base_10[] = "0123456789";
+#define G_BASE_10 "0123456789"
 
 int	put_nbr_base(unsigned long n, const char *base)
 {
@@ -41,7 +41,7 @@ int	put_nbr_base(unsigned long n, const char *base)
 
 int	put_unsigned_int(unsigned int n)
 {
-	return (put_nbr_base(n, g_base_10));
+	return (put_nbr_base(n, G_BASE_10));
 }
 
 int	put_int(int n)
@@ -64,7 +64,7 @@ int	put_int(int n)
 	}
 	else
 		converted_number = (unsigned long)n;
-	print_err = put_nbr_base(converted_number, g_base_10);
+	print_err = put_nbr_base(converted_number, G_BASE_10);
 	if (print_err < 0)
 		return (-1);
 	print_counter += print_err;

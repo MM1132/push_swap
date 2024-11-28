@@ -12,16 +12,22 @@ PUSH_SWAP_SRC := \
 	$(SRC_DIR)/main.c \
 	$(SRC_DIR)/stack.c \
 	$(SRC_DIR)/sort.c \
+	$(SRC_DIR)/stack_utils.c \
 	$(SRC_DIR)/operations/push_b.c \
 	$(SRC_DIR)/operations/push_a.c \
 	$(SRC_DIR)/operations/rotate_a.c \
 	$(SRC_DIR)/operations/rotate_b.c \
 	$(SRC_DIR)/operations/utils.c \
-	$(SRC_DIR)/operations/reverse_rotate_b.c
+	$(SRC_DIR)/operations/reverse_rotate_b.c \
+	$(SRC_DIR)/operations/rotate_ab.c
 PUSH_SWAP_OBJ := $(PUSH_SWAP_SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Rules
 all: $(NAME)
+
+# Debug
+debug: $(PUSH_SWAP_OBJ) $(LIBFT_DEPENDENCY)
+	$(CC) -g $(CFLAGS) $(PUSH_SWAP_OBJ) -L$(LIBFT_DIR) -lft -o $(NAME)_debug
 
 # Server rules
 $(NAME): $(PUSH_SWAP_OBJ) $(LIBFT_DEPENDENCY)

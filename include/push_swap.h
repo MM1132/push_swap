@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:15:50 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 15:36:07 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:51:52 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ int		get_smallest_index(long *arr, int arr_len);
 int		get_index_distance(int index_1, int index_2);
 int		get_next_smallest_index(long *temp_array,
 			int current_smallest_index, int arr_len);
+int		stack_sorted(t_stack *stack);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 16:14:14 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 15:29:48 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:48:29 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void	push_swap_sort(t_stack *stack_a, t_stack *stack_b)
 	int	decision_median;
 
 	decision_median = (double)ft_sqrt(stack_a->count) * (double) 1.3;
+	if (stack_sorted(stack_a))
+		return ;
 	while (stack_a->count > 0)
 	{
 		if (stack_a->numbers[0] <= stack_b->count)

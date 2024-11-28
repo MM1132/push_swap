@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:30:49 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 15:32:00 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:54:52 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ long	*create_temp_array(char **numbers_as_strings, int skip, int str_arr_len)
 		if (ft_isdigit_str(numbers_as_strings[index + skip]) == 0)
 			return (free(temp_array), NULL);
 		temp_array[index] = ft_atoi(numbers_as_strings[index + skip]);
+		if (temp_array[index] > __INT_MAX__)
+			return (free(temp_array), NULL);
 		index++;
 	}
 	return (temp_array);
@@ -91,4 +93,24 @@ int	get_next_smallest_index(long *temp_array,
 		index++;
 	}
 	return (next_smallest_index);
+}
+
+int	stack_sorted(t_stack *stack)
+{
+	int	biggest_number;
+	int	index;
+
+	index = 1;
+	if (stack->count < 2)
+		return (1);
+	biggest_number = stack->numbers[0];
+	while (index < stack->count)
+	{
+		if (stack->numbers[index] > biggest_number)
+			biggest_number = stack->numbers[index];
+		else
+			return (0);
+		index++;
+	}
+	return (1);
 }

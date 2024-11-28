@@ -9,17 +9,21 @@ LIBFT_DEPENDENCY := $(LIBFT_DIR)/libft.a
 # Exetuable setup
 NAME := push_swap
 PUSH_SWAP_SRC := \
-	$(SRC_DIR)/main.c \
-	$(SRC_DIR)/stack.c \
-	$(SRC_DIR)/sort.c \
-	$(SRC_DIR)/stack_utils.c \
-	$(SRC_DIR)/operations/push_b.c \
 	$(SRC_DIR)/operations/push_a.c \
+	$(SRC_DIR)/operations/push_b.c \
+	$(SRC_DIR)/operations/reverse_rotate_b.c \
 	$(SRC_DIR)/operations/rotate_a.c \
 	$(SRC_DIR)/operations/rotate_b.c \
+	$(SRC_DIR)/operations/rotate_ab.c \
+	$(SRC_DIR)/operations/rotate_utils.c \
+	$(SRC_DIR)/operations/swap_a.c \
 	$(SRC_DIR)/operations/utils.c \
-	$(SRC_DIR)/operations/reverse_rotate_b.c \
-	$(SRC_DIR)/operations/rotate_ab.c
+	$(SRC_DIR)/biggest_smallest.c \
+	$(SRC_DIR)/main.c \
+	$(SRC_DIR)/sort_up_to_five.c \
+	$(SRC_DIR)/sort.c \
+	$(SRC_DIR)/stack_utils.c \
+	$(SRC_DIR)/stack.c
 PUSH_SWAP_OBJ := $(PUSH_SWAP_SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 # Rules

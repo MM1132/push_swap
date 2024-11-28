@@ -6,14 +6,23 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 12:03:22 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/27 12:14:53 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 21:20:33 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate_b(t_stack *stack_b)
+void	reverse_rotate(t_stack *stack)
 {
-	reverse_rotate(stack_b);
-	ft_printf("rrb\n");
+	int	last_number_save;
+
+	last_number_save = stack->numbers[stack->count - 1];
+	shift_forward(stack);
+	stack->numbers[0] = last_number_save;
+}
+
+void	reverse_rotate_print(t_stack *stack)
+{
+	reverse_rotate(stack);
+	ft_printf("rr%c\n", stack->stack_name);
 }

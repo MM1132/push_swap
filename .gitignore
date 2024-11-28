@@ -2,6 +2,7 @@
 **/obj
 push_swap
 push_swap_visualizer
+push_swap_tester
 .vscode
 logic.txt
 checker_Mac

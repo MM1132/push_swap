@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 14:53:58 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 15:33:47 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 23:13:40 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ int	*normalize_numbers(long *temp_array, int arr_len)
 		current_smallest_index = get_next_smallest_index(temp_array,
 				current_smallest_index, arr_len);
 		if (current_smallest_index == -1)
+		{
 			return (free(new_array), NULL);
+		}
 		new_array[current_smallest_index] = index + 1;
 		index++;
 	}
@@ -42,7 +44,7 @@ t_stack	*initialize_stack(char **numbers_as_strings, int skip)
 	t_stack	*stack;
 	long	*temp_array;
 
-	stack = malloc(sizeof(stack));
+	stack = malloc(sizeof(t_stack));
 	if (stack == NULL)
 		return (NULL);
 	str_arr_len = 0;
@@ -57,6 +59,7 @@ t_stack	*initialize_stack(char **numbers_as_strings, int skip)
 	free(temp_array);
 	stack->count = str_arr_len - skip;
 	stack->max_count = str_arr_len - skip;
+	stack->stack_name = 'a';
 	return (stack);
 }
 
@@ -72,6 +75,7 @@ t_stack	*initialize_stack_empty(int length)
 		return (free(stack), NULL);
 	stack->count = 0;
 	stack->max_count = length;
+	stack->stack_name = 'b';
 	return (stack);
 }
 
@@ -83,16 +87,16 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
-// void	print_stack(t_stack *stack)
-// {
-// 	int	index;
+void	print_stack(t_stack *stack)
+{
+	int	index;
 
-// 	ft_printf("Stack numbers: ");
-// 	index = 0;
-// 	while (index < stack->count)
-// 	{
-// 		ft_printf("%d ", stack->numbers[index]);
-// 		index++;
-// 	}
-// 	ft_printf("\nCount: %d\n", stack->count);
-// }
+	ft_printf("Stack numbers: ");
+	index = 0;
+	while (index < stack->count)
+	{
+		ft_printf("%d ", stack->numbers[index]);
+		index++;
+	}
+	ft_printf("\nCount: %d\n", stack->count);
+}

@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 15:30:49 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 15:54:52 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:38:45 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ long	*create_temp_array(char **numbers_as_strings, int skip, int str_arr_len)
 		if (ft_isdigit_str(numbers_as_strings[index + skip]) == 0)
 			return (free(temp_array), NULL);
 		temp_array[index] = ft_atoi(numbers_as_strings[index + skip]);
-		if (temp_array[index] > __INT_MAX__)
+		if (temp_array[index] > INT_MAX || temp_array[index] < INT_MIN)
 			return (free(temp_array), NULL);
 		index++;
 	}
@@ -55,11 +55,11 @@ int	get_smallest_index(long *arr, int arr_len)
 	return (current_smallest_index);
 }
 
-int	get_index_distance(int index_1, int index_2)
+long	get_index_distance(int index_1, int index_2)
 {
-	int	distance;
+	long	distance;
 
-	distance = index_1 - index_2;
+	distance = (long)index_1 - (long)index_2;
 	if (distance < 0)
 		return (distance * -1);
 	return (distance);
@@ -68,10 +68,10 @@ int	get_index_distance(int index_1, int index_2)
 int	get_next_smallest_index(long *temp_array,
 	int current_smallest_index, int arr_len)
 {
-	int	index;
-	int	next_smallest_index;
-	int	distance;
-	int	new_distance;
+	int		index;
+	int		next_smallest_index;
+	long	distance;
+	long	new_distance;
 
 	index = 0;
 	distance = -1;

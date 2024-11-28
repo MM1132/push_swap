@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   swap_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/26 16:53:08 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 23:24:50 by rreimann         ###   ########.fr       */
+/*   Created: 2024/11/28 16:37:31 by rreimann          #+#    #+#             */
+/*   Updated: 2024/11/28 20:05:50 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	shift_forward(t_stack *stack)
+void	swap_a(t_stack *stack_a)
 {
-	int	index;
+	int	first_number;
 
-	index = stack->count;
-	if (stack->count == stack->max_count)
-		index--;
-	while (index > 0)
-	{
-		stack->numbers[index] = stack->numbers[index - 1];
-		index--;
-	}
-}
-
-void	shift_backward(t_stack *stack)
-{
-	int	index;
-
-	index = 0;
-	while (index < stack->count - 1)
-	{
-		stack->numbers[index] = stack->numbers[index + 1];
-		index++;
-	}
+	first_number = stack_a->numbers[0];
+	stack_a->numbers[0] = stack_a->numbers[1];
+	stack_a->numbers[1] = first_number;
+	ft_printf("sa\n");
 }

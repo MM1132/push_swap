@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 20:37:08 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/28 22:30:44 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/29 12:12:59 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	rotate_print(t_stack *stack)
 
 void	bring_index_to_top(t_stack *stack, int index)
 {
-	if (index < stack->count / 2)
+	if ((double)index < (double)((double)stack->count / (double)2))
 	{
 		while (index > 0)
 		{

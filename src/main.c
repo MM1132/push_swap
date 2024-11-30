@@ -6,7 +6,7 @@
 /*   By: rreimann <rreimann@student.42heilbronn.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 12:14:05 by rreimann          #+#    #+#             */
-/*   Updated: 2024/11/29 12:05:05 by rreimann         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:33:20 by rreimann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,18 @@ t_stack	*read_with_split_input(char *input_str)
 {
 	char	**split_input;
 	t_stack	*stack_a;
+	int		index;
 
 	split_input = ft_split(input_str, ' ');
 	if (split_input == NULL)
 		return (NULL);
 	stack_a = initialize_stack(split_input, 0);
+	index = 0;
+	while (split_input[index] != NULL)
+	{
+		free(split_input[index]);
+		index++;
+	}
 	free(split_input);
 	return (stack_a);
 }
